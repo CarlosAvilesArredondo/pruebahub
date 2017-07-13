@@ -1,0 +1,22 @@
+<html>     
+    <head>
+<script src="angular.min.js"></script> 
+        <script src="controladorform.js"></script> 
+    </head>
+    <body ng-app="mymodulo" ng-controller="formularioCtrl">
+      <h1>uso de formulario</h1>  
+      <form namme="formproductos" ng-submit="guardar()">
+        Nombre : <input required type="text" ng-model="producto.nombre">
+        Cantidad : <input required type="text" ng-model="producto.cantidad">
+        Precio : <input required type="text" ng-model="producto.precio">
+
+        <input type="submit"  ng-disable = "formproductos.$invalid" value="guardar">
+        <input type="button" ng-disable = "formproductos.$invalid" ng-click="editar()"value="Editar">
+
+      </form>
+
+       formulario {{formproductos}} <br>   
+      producto {{producto}}
+      
+    </body>
+      </html>
